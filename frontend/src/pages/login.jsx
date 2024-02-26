@@ -1,49 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './MyComponent.css'; // Importing styles from MyComponent.css
+import './MyComponent.css';
 
-function SignUp() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+function Login() {
+  // State variables for email, password, and admin status
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('worker'); // Default role is worker
+  const [isAdmin, setIsAdmin] = useState(false); // State for the admin checkbox
 
-  const handleSignUp = () => {
-    // Add signup logic here
-    console.log('Signing up...');
+  // Function to handle the login action
+  const handleLogin = () => {
+    // Add login logic here
+    console.log('Logging in...');
   };
 
-
+  // Render the login form
   return (
     <div className="container mt-5">
+      {/* Centering the form */}
       <div className="d-flex justify-content-center">
         <div className="col-md-6">
-          <h1 className="text-center mb-4">Sign Up</h1>
+          {/* Title */}
+          <h1 className="text-center mb-4">Login</h1>
+          {/* Form */}
           <form className="custom-form">
-            <div className="form-group second-form-group1">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="firstName"
-                placeholder="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </div>
-            <div className="form-group second-form-group1">
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="lastName"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-              />
-            </div>
-            <div className="form-group second-form-group1">
+            {/* Email input */}
+            <div className="form-group">
               <label htmlFor="email">Email address</label>
               <input
                 type="email"
@@ -54,7 +36,8 @@ function SignUp() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="form-group second-form-group1">
+            {/* Password input */}
+            <div className="form-group second-form-group">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -65,35 +48,32 @@ function SignUp() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="role">Role</label>
-              <select
-                className="form-control"
-                id="role"
-                
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-              >
-                <option value="worker">Worker</option>
-                <option value="admin">Admin</option>
-              </select>
+            {/* Admin checkbox and label */}
+            <div className="form-group form-check d-flex justify-content-center align-items-center mb-3">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="isAdmin"
+                checked={isAdmin}
+                onChange={() => setIsAdmin(!isAdmin)} // Toggle the isAdmin state when the checkbox is changed
+              />
+              <label className="form-check-label" htmlFor="isAdmin">Login as admin</label>
             </div>
+            {/* Login button */}
             <div className="form-group d-flex justify-content-center mt-3">
               <button
                 type="button"
-                className="btn btn-success btn-block custom-login-button" // Applying custom styles
-                onClick={handleSignUp}
+                className="btn btn-success btn-block custom-login-button"
+                onClick={handleLogin}
               >
-                Sign Up
+                Login
               </button>
             </div>
-
-           
           </form>
-
+          {/* Signup link */}
           <div className="text-center mt-3">
-            <span>Already have an account? </span>
-            <Link to="/login">Sign In</Link>
+            <span>Don't have an account?</span>
+            <Link to="/signup">Sign Up</Link>GO
           </div>
         </div>
       </div>
@@ -101,5 +81,9 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Login;
+
+
+
+
 
