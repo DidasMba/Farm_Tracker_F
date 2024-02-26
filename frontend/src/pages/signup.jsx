@@ -16,6 +16,17 @@ function SignUp() {
   };
 
   return (
+
+    <div>
+      {/* Logo au-dessus du formulaire de connexion */}
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Link to="/Farm Tracker" className="navbar-brand">
+          <img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }} />
+        </Link>
+      </div>
+
+      {/* Contenu de Login */}
+
     <div className="container mt-5">
       <div className="d-flex justify-content-center">
         <div className="col-md-6">
@@ -97,6 +108,7 @@ function SignUp() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
