@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './MyComponent.css';
 
+
 function Login() {
+
   // State variables for email, password, and admin status
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,7 +18,19 @@ function Login() {
 
   // Render the login form
   return (
+    <div>
+      {/* Logo au-dessus du formulaire de connexion */}
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Link to="/Farm Tracker" className="navbar-brand">
+          <img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }} />
+        </Link>
+      </div>
+
+      {/* Contenu de Login */}
+
     <div className="container mt-5">
+
+      
       {/* Centering the form */}
       <div className="d-flex justify-content-center">
         <div className="col-md-6">
@@ -77,6 +91,7 @@ function Login() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
