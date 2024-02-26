@@ -35,7 +35,7 @@ function Login() {
       <div className="d-flex justify-content-center">
         <div className="col-md-6">
           {/* Title */}
-          <h1 className="text-center mb-4">Login</h1>
+          <h2 className="text-center mb-4">Welcome to FarmTracker</h2>
           {/* Form */}
           <form className="custom-form">
             {/* Email input */}
