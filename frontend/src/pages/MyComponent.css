@@ -1,0 +1,20 @@
+.custom-login-button {
+    background-color: #62804A;
+    border-color: #62804A; /* Définir également la couleur de la bordure */
+    width: 350px;
+    font-weight: bold; 
+  
+  }
+  
+  .text-center > span {
+    margin-right: 320px; /* Ajoutez la marge souhaitée */
+  }
+  
+  .second-form-group{
+      margin-top: 45px; /* Ou toute autre valeur de marge souhaitée */
+    }
+   
+  
+  .second-form-group1{
+    margin-top: 20px;
+  }
