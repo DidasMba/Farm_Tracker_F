@@ -1,8 +1,7 @@
 .custom-login-button {
-    background-color: #62804A;
-    border-color: #62804A; /* Définir également la couleur de la bordure */
-    width: 350px;
-    font-weight: bold; 
+  align-items: center;
+  justify-content: center;
+  color: #3f6212;
   
   }
   
@@ -18,3 +17,4 @@
   .second-form-group1{
     margin-top: 20px;
   }
+

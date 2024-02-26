@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './MyComponent.css'; // Importing styles from MyComponent.css
 
 function SignUp() {
+  // Using useState hook to manage state variables
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -10,10 +11,9 @@ function SignUp() {
   const [role, setRole] = useState('worker'); // Default role is worker
 
   const handleSignUp = () => {
-    // Add signup logic here
+    // Placeholder function for signup logic
     console.log('Signing up...');
   };
-
 
   return (
     <div className="container mt-5">
@@ -21,6 +21,7 @@ function SignUp() {
         <div className="col-md-6">
           <h1 className="text-center mb-4">Sign Up</h1>
           <form className="custom-form">
+            {/* Form fields for user input */}
             <div className="form-group second-form-group1">
               <label htmlFor="firstName">First Name</label>
               <input
@@ -65,12 +66,12 @@ function SignUp() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            {/* Dropdown for selecting user role */}
             <div className="form-group">
               <label htmlFor="role">Role</label>
               <select
                 className="form-control"
                 id="role"
-                
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
               >
@@ -78,6 +79,7 @@ function SignUp() {
                 <option value="admin">Admin</option>
               </select>
             </div>
+            {/* Sign Up button */}
             <div className="form-group d-flex justify-content-center mt-3">
               <button
                 type="button"
@@ -87,10 +89,8 @@ function SignUp() {
                 Sign Up
               </button>
             </div>
-
-           
           </form>
-
+          {/* Link to navigate to sign in page */}
           <div className="text-center mt-3">
             <span>Already have an account? </span>
             <Link to="/login">Sign In</Link>
@@ -102,3 +102,4 @@ function SignUp() {
 }
 
 export default SignUp;
+
