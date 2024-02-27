@@ -11,8 +11,38 @@ function SignUp() {
   const [role, setRole] = useState('worker'); // Default role is worker
 
   const handleSignUp = () => {
-    // Placeholder function for signup logic
-    console.log('Signing up...');
+    // Construct the request body
+    const requestBody = {
+      firstName,
+      lastName,
+      email,
+      password,
+      role
+    };
+
+    // Send a POST request to the backend
+    fetch('http://127.0.0.1:5000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Signup successful:', data);
+      // Optionally, redirect user to another page after successful signup
+      // history.push('/dashboard');
+    })
+    .catch(error => {
+      console.error('Error signing up:', error);
+      // Handle errors, e.g., display an error message to the user
+    });
   };
 
   return (
