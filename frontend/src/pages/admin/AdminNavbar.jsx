@@ -28,6 +28,7 @@ function AdmNavbar() {
                 <li class="nav-item">
                   <a class="nav-link" href="#"><img src="https://i.ibb.co/SJPMktY/Profile-icon.png" alt="Profile-icon" style={{ maxWidth: '50px', maxHeight: '50px' }}></img></a>
                 </li>
+                
               </ul>
             </div>
           </div>

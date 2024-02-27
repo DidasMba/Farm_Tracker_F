@@ -45,3 +45,28 @@ a:hover {
     color: black; /* Button text color on hover */
   }
   
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+  }
+  
+  .table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  

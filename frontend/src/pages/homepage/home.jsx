@@ -99,7 +99,7 @@ function Home() {
                     <div className='col-12 text-center'> {/* Use 'text-center' class to center the button */}
                         <div className='btn-container'> {/* Assuming 'btn-container' has other styles */}
                             <button type="button" className="btn btn-success link">
-                                <Link to="/Get started" className="text-white link">Get started</Link>
+                                <Link to="/login" className="text-white link">Get started</Link>
                             </button>
                         </div>
                     </div>

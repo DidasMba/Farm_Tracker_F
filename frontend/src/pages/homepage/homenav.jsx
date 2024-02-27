@@ -14,7 +14,7 @@ function Header() {
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <Link to="/Farm Tracker" class="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }}></img></Link>
+                    <Link to="/" class="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }}></img></Link>
                     <l class="navbar-nav me-auto mb-2 mb-lg-0">
                         <div class="nav-item  ">
                             <Link to="/Features " class="nav-link"> Features </Link>
@@ -22,7 +22,9 @@ function Header() {
                         </div>
                     </l>
                     <form class=" btn-container ">
-                        <button type="button" class="btn btn-success link">Get started</button>
+                        <button type="button" className="btn btn-success link">
+                            <Link to="/login" className="text-white link">Get started</Link>
+                        </button>
                     </form>
                 </div>
             </div>
