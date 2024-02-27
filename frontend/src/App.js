@@ -8,6 +8,7 @@ import SignUp from './pages/signup'; // Import your login component
 import AdminDashboard from './pages/admin/AdminDash';
 import AdminInv from './pages/admin/AdminInventoryForm';
 import AdminTasks from'./pages/admin/AdminTasksForm';
+import WorkerTasks from './pages/worker/WorkerTasksTable';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/AdminDash" element={<AdminDashboard />} /> {/* Route for signup page */}
         <Route path="/AdminInventoryForm" element={<AdminInv />} />
         <Route path="/AdminTasksForm" element={<AdminTasks/>}/>
+        <Route path="/WorkerTasksTable" element={<WorkerTasks/>}/>
       </Routes>
     </Router>
   );
