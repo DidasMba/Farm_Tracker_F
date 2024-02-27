@@ -77,7 +77,7 @@ function Login() {
             <div className="form-group d-flex justify-content-center mt-3">
               <button
                 type="button"
-                className="btn btn-success btn-block custom-login-button"
+                className="btn btn-success btn-block custom-login-button text-white"
                 onClick={handleLogin}
               >
                 Login
@@ -85,9 +85,9 @@ function Login() {
             </div>
           </form>
           {/* Signup link */}
-          <div className="text-center mt-3">
+          <div className="text-center mt-2">
             <span>Don't have an account?</span>
-            <Link to="/signup">Sign Up</Link>GO
+            <Link to="/signup">Sign Up</Link>
           </div>
         </div>
       </div>
