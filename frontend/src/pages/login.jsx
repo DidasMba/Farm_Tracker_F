@@ -1,104 +1,116 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './MyComponent.css';
 
-
 function Login() {
-
-  // State variables for email, password, and admin status
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isAdmin, setIsAdmin] = useState(false); // State for the admin checkbox
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // Function to handle the login action
-  const handleLogin = () => {
-    // Add login logic here
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
     console.log('Logging in...');
+    setErrorMessage(''); // Clear any existing error messages
+    const loginData = {
+      email: email,
+      password: password,
+    };
+    //
+    try {
+      const response = await fetch('http://127.0.0.1:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Login successful:', data);
+       
+        // Redirect based on isAdmin state
+        isAdmin ? navigate('./pages/admin/AdminDashboard') :  navigate(`/WorkerDashboard`);
+      } else {
+        console.error('Login failed');
+        // Update the error message to inform the user
+        setErrorMessage('Failed to login. Please check your credentials and try again.');
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      // Update the error message for network errors
+      setErrorMessage('Network error. Please try again later.');
+    }
   };
 
-  // Render the login form
   return (
     <div>
-      {/* Logo au-dessus du formulaire de connexion */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <Link to="/pages/homepage/home.jsx" className="navbar-brand">
           <img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }} />
         </Link>
       </div>
 
-      {/* Contenu de Login */}
-
-    <div className="container mt-5">
-
-      
-      {/* Centering the form */}
-      <div className="d-flex justify-content-center">
-        <div className="col-md-6">
-          {/* Title */}
-          <h2 className="text-center mb-4">Welcome to FarmTracker</h2>
-          {/* Form */}
-          <form className="custom-form">
-            {/* Email input */}
-            <div className="form-group">
-              <label htmlFor="email">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+      <div className="container mt-5">
+        <div className="d-flex justify-content-center">
+          <div className="col-md-6">
+            <h2 className="text-center mb-4">Welcome to FarmTracker</h2>
+            <form className="custom-form">
+              <div className="form-group">
+                <label htmlFor="email">Email address</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="form-group second-form-group">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <div className="form-group form-check d-flex justify-content-center align-items-center mb-3">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="isAdmin"
+                  checked={isAdmin}
+                  onChange={() => setIsAdmin(!isAdmin)}
+                />
+                <label className="form-check-label" htmlFor="isAdmin">Login as admin</label>
+              </div>
+              <div className="form-group d-flex justify-content-center mt-3">
+                <button
+                  type="button"
+                  className="btn btn-success btn-block custom-login-button text-white"
+                  onClick={handleLogin}
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+            {/* Display error message if it exists */}
+            {errorMessage && <div className="alert alert-danger" role="alert">{errorMessage}</div>}
+            <div className="text-center mt-2">
+              <span>Don't have an account?</span>
+              <Link to="/signup">Sign Up</Link>
             </div>
-            {/* Password input */}
-            <div className="form-group second-form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            {/* Admin checkbox and label */}
-            <div className="form-group form-check d-flex justify-content-center align-items-center mb-3">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="isAdmin"
-                checked={isAdmin}
-                onChange={() => setIsAdmin(!isAdmin)} // Toggle the isAdmin state when the checkbox is changed
-              />
-              <label className="form-check-label" htmlFor="isAdmin">Login as admin</label>
-            </div>
-            {/* Login button */}
-            <div className="form-group d-flex justify-content-center mt-3">
-              <button
-                type="button"
-                className="btn btn-success btn-block custom-login-button text-white"
-                onClick={handleLogin}
-              >
-                Login
-              </button>
-            </div>
-          </form>
-          {/* Signup link */}
-          <div className="text-center mt-2">
-            <span>Don't have an account?</span>
-            <Link to="/signup">Sign Up</Link>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
 
 export default Login;
-
-
-
-
-

@@ -11,19 +11,20 @@ function WkSidebar() {
             <h5 className="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
           </div>
+          <Link to="/" className="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" className='logo' style={{ maxWidth: '250px', maxHeight: '250px' }}></img></Link> 
           <div className="d-flex flex-column align-items-center">
             <ul className="list-unstyled">
               <li className='dash' style={{ marginBottom: '50px', marginTop:'150px' }}>
-                <Link to="/dashboard"><img src="https://i.ibb.co/QjSNC0g/Group-10.png" alt="Group-10" style={{ maxWidth: '200px', maxHeight: '200px' }} border="0"></img></Link>
+                <Link to="/WorkerDashboard"><img src="https://i.ibb.co/QjSNC0g/Group-10.png" alt="Group-10" style={{ maxWidth: '200px', maxHeight: '200px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
-                <Link to="/AdminTasksForm"><img src="https://i.ibb.co/ZWrKG4j/Group-11.png" alt="Group-11" style={{ maxWidth: '160px', maxHeight: '200px' }} border="0"></img></Link>
+                <Link to="/WorkerTasksTable"><img src="https://i.ibb.co/ZWrKG4j/Group-11.png" alt="Group-11" style={{ maxWidth: '160px', maxHeight: '200px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
-                <Link to="/weather"><img src="https://i.ibb.co/j4SWM5Q/Group-12.png" alt="Group-12" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
+                <Link to="/WWeather"><img src="https://i.ibb.co/j4SWM5Q/Group-12.png" alt="Group-12" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
-                <Link to="/inventory"><img src="https://i.ibb.co/vHwYCL0/Group-17.png" alt="Group-17" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
+                <Link to="/WorkerInventory"><img src="https://i.ibb.co/vHwYCL0/Group-17.png" alt="Group-17" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
                 <Link to="/reports"><img src="https://i.ibb.co/Kr9jtYt/Group-13.png" alt="Group-13" style={{ maxWidth: '160px', maxHeight: '150px' }} border="0"></img></Link>

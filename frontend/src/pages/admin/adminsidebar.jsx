@@ -24,7 +24,7 @@ function AdmSidebar() {
                 <Link to="/AdminTasksForm"><img src="https://i.ibb.co/ZWrKG4j/Group-11.png" alt="Group-11" style={{ maxWidth: '160px', maxHeight: '200px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
-                <Link to="/weather"><img src="https://i.ibb.co/j4SWM5Q/Group-12.png" alt="Group-12" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
+                <Link to="/AdWeather"><img src="https://i.ibb.co/j4SWM5Q/Group-12.png" alt="Group-12" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '50px' }}>
                 <Link to="/AdminInventoryForm"><img src="https://i.ibb.co/vHwYCL0/Group-17.png" alt="Group-17" style={{ maxWidth: '200px', maxHeight: '150px' }} border="0"></img></Link>

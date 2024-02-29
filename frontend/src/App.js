@@ -9,6 +9,10 @@ import AdminDashboard from './pages/admin/AdminDash';
 import AdminInv from './pages/admin/AdminInventoryForm';
 import AdminTasks from'./pages/admin/AdminTasksForm';
 import WorkerTasks from './pages/worker/WorkerTasksTable';
+import WorkerInventory from './pages/worker/WorkerInventory';
+import WorkerDashboard from './pages/worker/ WorkerDashboard';
+import AdWeather from './pages/admin/AdWeather';
+import WWeather from './pages/worker/WWeather';
 
 
 function App() {
@@ -22,6 +26,11 @@ function App() {
         <Route path="/AdminInventoryForm" element={<AdminInv />} />
         <Route path="/AdminTasksForm" element={<AdminTasks/>}/>
         <Route path="/WorkerTasksTable" element={<WorkerTasks/>}/>
+        <Route path="/WorkerInventory" element={<WorkerInventory/>}/>
+        <Route path="/WorkerDashboard" element={<WorkerDashboard/>}/>
+        <Route path="/AdWeather" element={<AdWeather/>}/>
+        <Route path="/weather" element={<WWeather/>}/>
+
       </Routes>
     </Router>
   );

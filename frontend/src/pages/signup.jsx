@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import './MyComponent.css'; // Importing styles from MyComponent.css
 
 function SignUp() {
@@ -8,16 +8,17 @@ function SignUp() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('worker'); // Default role is worker
+  const [role, setRole] = useState('user'); // Default role is worker
 
+  const navigate = useNavigate();
   const handleSignUp = () => {
     // Construct the request body
     const requestBody = {
-      firstName,
-      lastName,
-      email,
-      password,
-      role
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      password: password,
+      role: role
     };
 
     // Send a POST request to the backend
@@ -29,13 +30,14 @@ function SignUp() {
       body: JSON.stringify(requestBody)
     })
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      // if (!response.ok) {
+      //   throw new Error('Network response was not ok');
+      // }
       return response.json();
     })
     .then(data => {
-      console.log('Signup successful:', data);
+      console.log('Signup successful:', data); 
+      navigate('/login'); // Redirect to the login page on successful signup  
       // Optionally, redirect user to another page after successful signup
       // history.push('/dashboard');
     })
@@ -116,8 +118,8 @@ function SignUp() {
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
               >
-                <option value="worker">Worker</option>
-                <option value="admin">Admin</option>
+                <option value="worker">User</option>
+                {/* <option value="admin">Admin</option> */}
               </select>
             </div>
             {/* Sign Up button */}
@@ -144,4 +146,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
