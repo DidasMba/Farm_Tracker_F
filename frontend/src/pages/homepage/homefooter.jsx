@@ -10,7 +10,7 @@ function HomeFooter() {
           {/* First row */}
           <div className="col">
             <div className="col">
-              <Link to="/Farm Tracker" class="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }}></img></Link>
+              <Link to="/" class="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }}></img></Link>
             </div>
           </div>
           {/* Second row */}
@@ -18,9 +18,9 @@ function HomeFooter() {
             <div className="row text-black">
               <h4 className="text-lg  text-black font-bold mb-2">Product</h4>
               <ul>
-                <li><a href="/farm-tracker" class='text-black nav-link'>Farm Tracker</a></li>
-                <li><a href="/help-support" class='text-black nav-link'>Help & Support</a></li>
-                <li><a href="/plans-pricing" class='text-black nav-link'>Plans & Pricing</a></li>
+                <li><a href="/" class='text-black nav-link'>Farm Tracker</a></li>
+                <li><a href="/" class='text-black nav-link'>Help & Support</a></li>
+                <li><a href="/" class='text-black nav-link'>Plans & Pricing</a></li>
               </ul>
             </div>
           </div>
@@ -29,8 +29,8 @@ function HomeFooter() {
             <div className="row text-black">
               <h4 className="text-lg text-black font-bold mb-2">Services</h4>
               <ul>
-                <li><a href="/task-management" class='text-black nav-link'>Task Management</a></li>
-                <li><a href="/inventory-tracking" class='text-black nav-link'>Inventory Tracking</a></li>
+                <li><a href="/" class='text-black nav-link'>Task Management</a></li>
+                <li><a href="/" class='text-black nav-link'>Inventory Tracking</a></li>
               </ul>
             </div>
           </div>
@@ -39,10 +39,10 @@ function HomeFooter() {
             <div className="row text-black nav-link">
               <h4 className="text-lg font-bold mb-2">Links</h4>
               <ul>
-                <li><a href="/contact-us" class='text-black nav-link'>Contact Us</a></li>
-                <li><a href="/about-us" class='text-black nav-link'>About Us</a></li>
-                <li><a href="/faqs" class='text-black nav-link'>FAQs</a></li>
-                <li><a href="/why-farm-tracker" class='text-black nav-link'>Why Farm Tracker</a></li>
+                <li><a href="/" class='text-black nav-link'>Contact Us</a></li>
+                <li><a href="/" class='text-black nav-link'>About Us</a></li>
+                <li><a href="/" class='text-black nav-link'>FAQs</a></li>
+                <li><a href="/" class='text-black nav-link'>Why Farm Tracker</a></li>
               </ul>
             </div>
           </div>

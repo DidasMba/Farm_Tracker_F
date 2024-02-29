@@ -67,8 +67,11 @@ const AdminTasks = () => {
                   <label htmlFor="dueDate" className="form-label">Due Date</label>
                   <input type="date" className="form-control" id="dueDate" name="dueDate" value={formData.dueDate} onChange={handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-                <button type="button" className="btn btn-secondary" onClick={toggleOverlay}>Cancel</button>
+                <div>
+                  <button type="submit" className="btn btn-success" style={{ marginRight: '60px' }}>Submit</button>
+                  <button type="button" className="btn btn-secondary" onClick={toggleOverlay}>Cancel</button>
+                </div>
+
               </form>
             </div>
           </div>

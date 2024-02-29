@@ -11,8 +11,10 @@ import AdminTasks from'./pages/admin/AdminTasksForm';
 import WorkerTasks from './pages/worker/WorkerTasksTable';
 import WorkerInventory from './pages/worker/WorkerInventory';
 import WorkerDashboard from './pages/worker/ WorkerDashboard';
-import AdWeather from './pages/admin/AdWeather';
-import WWeather from './pages/worker/WWeather';
+import WorkersTable from './pages/admin/team';
+import AdminReport from './pages/admin/adminReport';
+import WorkerReport from './pages/worker/WorkerReport';
+
 
 
 function App() {
@@ -28,9 +30,9 @@ function App() {
         <Route path="/WorkerTasksTable" element={<WorkerTasks/>}/>
         <Route path="/WorkerInventory" element={<WorkerInventory/>}/>
         <Route path="/WorkerDashboard" element={<WorkerDashboard/>}/>
-        <Route path="/AdWeather" element={<AdWeather/>}/>
-        <Route path="/weather" element={<WWeather/>}/>
-
+        <Route path="/team" element={<WorkersTable/>}/>
+        <Route path="/adminReport" element={<AdminReport/>}/>
+        <Route path="/WorkerReport" element={<WorkerReport/>}/>
       </Routes>
     </Router>
   );

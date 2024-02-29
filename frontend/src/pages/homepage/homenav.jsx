@@ -17,8 +17,8 @@ function Header() {
                     <Link to="/" class="navbar-brand"><img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }}></img></Link>
                     <l class="navbar-nav me-auto mb-2 mb-lg-0">
                         <div class="nav-item  ">
-                            <Link to="/Features " class="nav-link"> Features </Link>
-                            <Link to="/About Us " class="nav-link"> About Us </Link>
+                            <Link to="/" class="nav-link"> Features </Link>
+                            <Link to="/ " class="nav-link"> About Us </Link>
                         </div>
                     </l>
                     <form class=" btn-container ">
