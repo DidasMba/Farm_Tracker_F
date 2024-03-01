@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
-import './MyComponent.css'; // Importing styles from MyComponent.css
+import '/home/prince/development/lib/Farm_Tracker_F/frontend/src/pages/MyComponent.css';
 
-function SignUp() {
+function AdmSignUp() {
   // Using useState hook to manage state variables
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -37,7 +37,7 @@ function SignUp() {
     })
     .then(data => {
       console.log('Signup successful:', data); 
-      navigate('/login'); // Redirect to the login page on successful signup  
+      navigate('/adminlogin'); // Redirect to the login page on successful signup  
       // Optionally, redirect user to another page after successful signup
       // history.push('/dashboard');
     })
@@ -145,4 +145,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default AdmSignUp;

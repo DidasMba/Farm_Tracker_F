@@ -14,6 +14,9 @@ import WorkerDashboard from './pages/worker/ WorkerDashboard';
 import WorkersTable from './pages/admin/team';
 import AdminReport from './pages/admin/adminReport';
 import WorkerReport from './pages/worker/WorkerReport';
+import Settings from './pages/admin/AdminSettings';
+import AdmLogin from './pages/admin/adminlogin';
+import AdmSignUp from './pages/admin/adminsignup';
 
 
 
@@ -33,6 +36,10 @@ function App() {
         <Route path="/team" element={<WorkersTable/>}/>
         <Route path="/adminReport" element={<AdminReport/>}/>
         <Route path="/WorkerReport" element={<WorkerReport/>}/>
+        <Route path="/AdminSettings" element={<Settings/>}/>
+        <Route path="/adminlogin" element={<AdmLogin/>}/>
+        <Route path="/adminsignup" element={<AdmSignUp/>}/>
+
       </Routes>
     </Router>
   );

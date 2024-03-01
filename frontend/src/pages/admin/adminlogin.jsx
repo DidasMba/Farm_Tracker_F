@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './MyComponent.css';
+import '/home/prince/development/lib/Farm_Tracker_F/frontend/src/pages/MyComponent.css';
 
-function Login() {
+function AdmLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isAdmin,] = useState(false); // State for the admin checkbox
@@ -32,7 +32,7 @@ function Login() {
         console.log('Login successful:', data);
        
         // Redirect based on isAdmin state
-        isAdmin ? navigate('./pages/admin/AdminDashboard') :  navigate(`/WorkerDashboard`);
+        isAdmin ? navigate('./pages/admin/AdminDashboard') :  navigate(`/AdminDash`);
       } else {
         console.error('Login failed');
         // Update the error message to inform the user
@@ -85,20 +85,17 @@ function Login() {
                 <button
                   type="button"
                   className="btn btn-success btn-block custom-login-button text-white"
-                  onClick={handleLogin} style={{ marginRight: '60px' }}
+                  onClick={handleLogin}
                 >
                   Login
                 </button>
-                <button type="button" className="btn btn-success ">
-                            <Link to="/adminlogin" className="text-white">Login As Admin</Link>
-                        </button>
               </div>
             </form>
             {/* Display error message if it exists */}
             {errorMessage && <div className="alert alert-danger" role="alert">{errorMessage}</div>}
             <div className="text-center mt-2">
               <span>Don't have an account?</span>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/adminsignup">Sign Up</Link>
             </div>
           </div>
         </div>
@@ -107,4 +104,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AdmLogin;

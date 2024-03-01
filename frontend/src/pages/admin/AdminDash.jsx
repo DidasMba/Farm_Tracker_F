@@ -7,7 +7,7 @@ function AdminDashboard() {
   // Dummy user data
   const user = {
     avatarUrl: 'https://i.pinimg.com/564x/e8/58/94/e8589424b38a561d93ece194321ebd06.jpg',
-    name: 'John Doe',
+    name:'Nuru',
   };
 
   // Dummy data for cards

@@ -33,7 +33,7 @@ function AdmSidebar() {
                 <Link to="/adminReport"><img src="https://i.ibb.co/Kr9jtYt/Group-13.png" alt="Group-13" style={{ maxWidth: '160px', maxHeight: '150px' }} border="0"></img></Link>
               </li>
               <li style={{ marginBottom: '1px' }}>
-                <Link to="/settings"><img src="https://i.ibb.co/6PT6Q2w/Group-16.png" alt="Group-16" style={{ maxWidth: '200px', maxHeight: '150px' }}  border="0"></img></Link>
+                <Link to="/AdminSettings"><img src="https://i.ibb.co/6PT6Q2w/Group-16.png" alt="Group-16" style={{ maxWidth: '200px', maxHeight: '150px' }}  border="0"></img></Link>
               </li>
             </ul>
           </div>
