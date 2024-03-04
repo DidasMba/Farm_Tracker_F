@@ -9,6 +9,15 @@ import AdminDashboard from './pages/admin/AdminDash';
 import AdminInv from './pages/admin/AdminInventoryForm';
 import AdminTasks from'./pages/admin/AdminTasksForm';
 import WorkerTasks from './pages/worker/WorkerTasksTable';
+import WorkerInventory from './pages/worker/WorkerInventory';
+import WorkerDashboard from './pages/worker/ WorkerDashboard';
+import WorkersTable from './pages/admin/team';
+import AdminReport from './pages/admin/adminReport';
+import WorkerReport from './pages/worker/WorkerReport';
+import Settings from './pages/admin/AdminSettings';
+import AdmLogin from './pages/admin/adminlogin';
+import AdmSignUp from './pages/admin/adminsignup';
+
 
 
 function App() {
@@ -22,6 +31,15 @@ function App() {
         <Route path="/AdminInventoryForm" element={<AdminInv />} />
         <Route path="/AdminTasksForm" element={<AdminTasks/>}/>
         <Route path="/WorkerTasksTable" element={<WorkerTasks/>}/>
+        <Route path="/WorkerInventory" element={<WorkerInventory/>}/>
+        <Route path="/WorkerDashboard" element={<WorkerDashboard/>}/>
+        <Route path="/team" element={<WorkersTable/>}/>
+        <Route path="/adminReport" element={<AdminReport/>}/>
+        <Route path="/WorkerReport" element={<WorkerReport/>}/>
+        <Route path="/AdminSettings" element={<Settings/>}/>
+        <Route path="/adminlogin" element={<AdmLogin/>}/>
+        <Route path="/adminsignup" element={<AdmSignUp/>}/>
+
       </Routes>
     </Router>
   );
