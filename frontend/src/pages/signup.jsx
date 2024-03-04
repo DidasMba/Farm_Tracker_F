@@ -54,7 +54,7 @@ function SignUp() {
           <img src="https://i.ibb.co/NTtQKqZ/logo.png" alt="logo" style={{ maxWidth: '200px', maxHeight: '200px' }} />
         </Link>
       </div>
-
+      
       {/* Contenu de Login */}
 
     <div className="container mt-5">
@@ -116,8 +116,8 @@ function SignUp() {
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
               >
-                <option value="worker">Worker</option>
-                <option value="admin">Admin</option>
+                <option value="worker">User</option>
+                {/* <option value="admin">Admin</option> */}
               </select>
             </div>
             {/* Sign Up button */}
