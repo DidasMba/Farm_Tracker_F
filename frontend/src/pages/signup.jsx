@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
-import './MyComponent.css'; // Importing styles from MyComponent.css
+import '../MyComponent.css'; // Importing styles from MyComponent.css
 
 function SignUp() {
   // Using useState hook to manage state variables

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '/home/prince/development/lib/Farm_Tracker_F/frontend/src/pages/MyComponent.css';
+import '../../MyComponent.css';
+
 
 function AdmLogin() {
   const [email, setEmail] = useState('');
