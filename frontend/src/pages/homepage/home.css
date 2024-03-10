@@ -40,6 +40,11 @@
     padding-top: 8px;
 }
 
-a.link{
+a.link{   
     text-decoration: none;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
