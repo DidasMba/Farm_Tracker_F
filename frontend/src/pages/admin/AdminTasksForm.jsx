@@ -3,6 +3,7 @@ import AdmSidebar from './adminsidebar';
 import AdmNavbar from './AdminNavbar';
 import './admin.css';
 
+
 const AdminTasks = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -22,6 +23,7 @@ const AdminTasks = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,7 +73,6 @@ const AdminTasks = () => {
                   <button type="submit" className="btn btn-success" style={{ marginRight: '60px' }}>Submit</button>
                   <button type="button" className="btn btn-secondary" onClick={toggleOverlay}>Cancel</button>
                 </div>
-
               </form>
             </div>
           </div>
@@ -81,7 +82,7 @@ const AdminTasks = () => {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Assigned To</th>
-              <th scope="col">Category</th>
+              <th scope="col">Category</th> 
               <th scope="col">Priority</th>
               <th scope="col">Status</th>
               <th scope="col">Due Date</th>
