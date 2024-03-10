@@ -178,7 +178,7 @@ function Home() {
                                 <img src="https://i.pinimg.com/564x/10/2a/7c/102a7ca04eb49410426895c355c227cf.jpg"
                                     class="rounded-circle shadow-1-strong" width="150" height="150" alt='' />
                             </div>
-                            <h5 class="mb-3">John Smith</h5>
+                            <h5 class="mb-3">Didas Mb</h5>
                             <h6 class="text-success mb-3">Vegetable Farmer</h6>
                             <p class="px-xl-3">
                                 <i class="fas fa-quote-left pe-2"></i>"Farm Tracker has been a game-changer for our large-scale farm operation. The ability to manage inventory, assign tasks, and track weather conditions all in one platform has saved us time and improved our decision-making process. We couldn't be happier with the results!"
