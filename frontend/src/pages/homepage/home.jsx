@@ -24,7 +24,7 @@ function Home() {
                             <Link to="/login" className="text-white">Get started</Link>
                         </button>
                     </div>
-                    <div className='col-12 w-35 image-container' >
+                    <div className='col-12  image-container' >
                         <img src="https://www.futurefarming.com/app/uploads/2022/03/IMG_farmerafrica-848x565.jpg" class="img-fluid rounded-2 width: 100%" alt="farm hero" />
                     </div>
                 </div>
